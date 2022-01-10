@@ -43,12 +43,23 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
+      }
+    }
+  </script>
+
   <% if (isLocal) { %>
   <script type="systemjs-importmap">
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@IPR/root-config": "//localhost:3000/IPR-root-config.js"
+        "@IPR/root-config": "//localhost:5000/IPR-root-config.js",
+        "@ukonsas28/firstApp": "http://localhost:3001/ukonsas28-firstApp.js",
+        "@ukonsas28/secondApp": "http://localhost:3002/ukonsas28-secondApp.js"
       }
     }
   </script>

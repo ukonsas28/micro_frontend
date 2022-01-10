@@ -19,7 +19,18 @@
 
   <main>
     <route default>
-      <application name="@single-spa/welcome"></application>
+      <single-spa-router>
+        <main>
+          <route default>HI</route>
+          <route path="/first"> 
+            <application name="@ukonsas28/firstApp"></application>
+          </route>
+          <route path="/second"> 
+            <application name="@ukonsas28/secondApp"></application>
+          </route>
+        </main>
+      </single-spa-router>
+
     </route>
   </main>
 </single-spa-router>
